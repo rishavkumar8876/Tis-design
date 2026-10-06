@@ -2,7 +2,7 @@
 
 An animated, mobile-first redesign of the [TIS homepage](https://tis.edu.in/), built for the Frontend Developer task. The school's name, branding and copy are kept; the page is rebuilt as a modern single-page experience.
 
-**Live site:** _add your Vercel / Netlify link here_
+**Live site:** https://tis-design-smoky.vercel.app/
 
 ## Tech stack
 
@@ -15,7 +15,6 @@ An animated, mobile-first redesign of the [TIS homepage](https://tis.edu.in/), b
 
 ## Features
 
-The brief asks for two extras; all four are included.
 
 - **Custom cursor** — a dot plus a trailing ring that grows over links, buttons, form fields and cards. Only shown for mouse users, never on touch devices.
 - **Scroll-triggered reveals** — sections and cards slide in with a stagger as they enter the viewport. Stats count up when seen.
@@ -33,7 +32,7 @@ npm install
 npm run dev
 ```
 
-The site's images are included in `public/images/`, so no separate asset download step is needed.
+The site's images are included in `public/images/`
 
 Open the address printed in the terminal (usually http://localhost:5173).
 
@@ -47,13 +46,13 @@ npm run lint      # check the code with oxlint
 
 ## Deploy
 
-**Vercel (recommended)**
+**Vercel**
 
 1. Push this repository to GitHub.
 2. On vercel.com choose **Add New → Project** and import the repository.
 3. Keep the defaults (Framework: Vite, Build: `npm run build`, Output: `dist`) and click **Deploy**.
 
-**Netlify:** same steps, with build command `npm run build` and publish directory `dist`.
+
 
 ## Project structure
 
@@ -81,11 +80,3 @@ Design decisions worth knowing:
 - Colours are CSS variables (`--bg`, `--ink`, `--accent`...), so the dark theme is just a second set of values.
 - Semantic HTML throughout: `header`, `nav`, `main`, `section` with labels, `footer`, real buttons, tab roles on the achievers tabs, a skip link, and visible focus rings.
 
-## Notes and limitations
-
-- **Images** are the school's own photos from `tis.edu.in`, included locally in `public/images/`. If a file is missing, a tinted placeholder appears instead; restore it into `public/images/` with the same file name.
-- **The three parent testimonial videos** still stream from the school's video host (`assets.tulas.edu.in`) because the files are large.
-- **The enquiry form has no backend.** It validates the fields and shows a thank-you message. The original site's phone-OTP step is not reproduced.
-- Navigation items point to sections of this single page rather than the original site's separate pages.
-- Obvious typos in the original copy were corrected (for example "Pollution", "Uttarakhand").
-- Fonts (Fraunces and Inter) load from Google Fonts.
